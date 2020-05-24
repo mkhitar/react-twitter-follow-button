@@ -1,0 +1,52 @@
+{
+  "name": "react-twitter-follow-button",
+  "version": "0.1.0",
+  "description": "React component for twitter follow button",
+  "main": "dist/react-twitter-follow-button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && webpack --colors --debug --display-error-details",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkhitar/react-twitter-follow-button.git"
+  },
+  "keywords": [
+    "twitter",
+    "follow",
+    "button",
+    "react",
+    "component",
+    "social"
+  ],
+  "author": "Mkhitar",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.3.0 || ^16",
+    "react-dom": "^15.3.0 || ^16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.4"
+  }
+}

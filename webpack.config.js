@@ -1,0 +1,34 @@
+const path = require('path');
+const webpack = require('webpack');
+const rules = [
+  { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+];
+
+module.exports = [{
+  entry: './src/ReactTwitterFollowButton.jsx',
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'react-twitter-follow-button.js',
+    libraryTarget: 'commonjs2',
+  },
+  devtool: 'source-map',
+  module: { rules },
+  resolve: {
+    modules: ['node_modules', 'src'],
+    extensions: ['.json', '.js', '.jsx'],
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false,
+      },
+    }),
+  ]
+}];

@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "global-require": 0,
+    "no-console": 0,
+    "max-len": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "object-curly-newline" : ["error", { "multiline": true }]
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
